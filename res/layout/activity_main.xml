@@ -3,16 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/back_black"
     tools:context="www.chinaott.net.MainActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1" >
+        
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting_about_golive_logo"/>
 
         <TextView 
             android:layout_width="wrap_content"
@@ -20,23 +22,27 @@
             android:text="  "
             android:layout_weight="1"/>
         <Button
+            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:text="升级会员" 
             android:id="@+id/sj_btn"
+            android:textColor="@color/white"
             android:gravity="center"
             android:background="@drawable/bg_alibuybutton"/>
 
         <TextView
+            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/deongaree"
             android:text="账户：21921" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_sf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="8"
         android:background="@drawable/b"
         android:visibility="visible" >
@@ -50,17 +56,16 @@
 
     <LinearLayout
         android:id="@+id/ll_yh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="8"
-        android:background="@drawable/c"
         android:orientation="vertical"
         android:visibility="gone" >
 
         <LinearLayout
             android:id="@+id/ll_yh_tab"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1" 
             android:orientation="horizontal">
 
@@ -69,6 +74,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/bg_bottomfouc"
+                android:textColor="@color/white"
                 android:text="充值" />
             
             <Button 
@@ -76,31 +83,39 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content" 
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottomfouc"
+                android:textColor="@color/white"
                 android:text="全球播会员"/>
             <Button 
                 android:id="@+id/yh_xx"
                 android:layout_weight="1"
                 android:layout_width="wrap_content" 
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottomfouc"
+                android:textColor="@color/white"
                 android:text="我的信息"/>
             <Button 
                 android:id="@+id/yh_qb"
                 android:layout_weight="1"
                 android:layout_width="wrap_content" 
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottomfouc"
+                android:textColor="@color/white"
                 android:text="我的钱包"/>
             <Button 
                 android:id="@+id/yh_gd"
                 android:layout_weight="1"
                 android:layout_width="wrap_content" 
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_bottomfouc"
+                android:textColor="@color/white"
                 android:text="更多"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_yh_cz"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="4" 
             android:visibility="visible">
             <ImageView 
@@ -112,7 +127,7 @@
          <LinearLayout
             android:id="@+id/ll_yh_hy"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="4" 
             android:visibility="gone"
             android:orientation="vertical">
@@ -121,6 +136,7 @@
                  android:layout_weight="1"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
+                 android:textColor="@color/white"
                  android:gravity="center"
                  android:text="成为全球播会员你将享有会员价观看影片和更多观景特权！"/>
             <RelativeLayout 
@@ -132,23 +148,27 @@
                     android:id="@+id/hy_3y"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:text="899元"/>
                 <Button 
                     android:id="@+id/hy_5y"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_toRightOf="@id/hy_3y"
                     android:text="1199元"/>
                 <Button 
                     android:id="@+id/hy_1m"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_below="@id/hy_3y"
                     android:text="30元"/>
                 <Button 
                     android:id="@+id/hy_3m"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_below="@id/hy_3y"
                     android:layout_toRightOf="@id/hy_1m"
                     android:text="88元"/>
@@ -164,7 +184,7 @@
           <LinearLayout
             android:id="@+id/ll_yh_xx"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="4" 
             android:visibility="gone">
             <ImageView 
@@ -176,7 +196,7 @@
            <LinearLayout
             android:id="@+id/ll_yh_qb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="4" 
             android:visibility="gone">
             <ImageView 
@@ -188,7 +208,7 @@
             <LinearLayout
             android:id="@+id/ll_yh_gd"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="4" 
             android:visibility="gone"
             android:orientation="vertical">
@@ -204,18 +224,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="观看记录"
-                        android:background="@drawable/ic_launcher"/>
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_bottomfouc"
+                        android:drawableTop="@drawable/ic_launcher"/>
                     <Button 
                         android:id="@+id/gd_gy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="关于"
-                        android:background="@drawable/ic_launcher"/>
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_bottomfouc"
+                        android:drawableTop="@drawable/ic_launcher"/>
                 </LinearLayout>
                 
                  <LinearLayout 
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:layout_weight="1">
@@ -224,13 +248,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="问题反馈"
-                        android:background="@drawable/ic_launcher"/>
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_bottomfouc"
+                        android:drawableTop="@drawable/ic_launcher"/>
                     <Button 
                         android:id="@+id/gd_bz"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="帮助"
-                        android:background="@drawable/ic_launcher"/>
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_bottomfouc"
+                        android:drawableTop="@drawable/ic_launcher"/>
                 </LinearLayout>
                 
         </LinearLayout>
@@ -238,8 +266,8 @@
 
     <LinearLayout
         android:id="@+id/ll_jc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="8"
         android:background="@drawable/d"
         android:visibility="gone" >
@@ -253,7 +281,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="2"
         android:gravity="center"
         android:orientation="horizontal" >
@@ -262,19 +290,29 @@
             android:id="@+id/sf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="首发影院" />
+            android:text="首发影院" 
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_bottomfouc"/>
 
         <Button
             android:id="@+id/yh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@null"
+            android:background="@drawable/bg_bottomfouc"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:text="用户中心" />
 
         <Button
             android:id="@+id/jc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottomfouc"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
             android:text="精彩片花" />
     </LinearLayout>
 

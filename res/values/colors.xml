@@ -25,4 +25,7 @@
     <color name="live_text_color">#becbcc</color>
     
     <color name="sj_btn">#113DEE</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#EEEEEE</color>
+    <color name="deongaree">#66cc00</color>
 </resources>
