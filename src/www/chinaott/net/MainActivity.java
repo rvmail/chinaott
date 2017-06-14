@@ -12,9 +12,14 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 import www.chinaott.net.R;
+import www.chinaott.net.gallery.GalleryFlow;
+import www.chinaott.net.gallery.ImageAdapter;
 import www.chinaott.net.ui.AboutActivity;
 import www.chinaott.net.ui.FeedbackActivity;
 import www.chinaott.net.ui.HelpActivity;
@@ -34,7 +39,10 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 		initView();
+		gallary();
 	}
+
+	
 
 	private void initView() {
 		// TODO Auto-generated method stub
@@ -417,4 +425,29 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 		}
 	}
 
+	private void gallary() {
+		Integer[] images = { R.drawable.img001, R.drawable.img002,
+				R.drawable.img003, R.drawable.img004, R.drawable.img005,
+				R.drawable.img006, R.drawable.img007, R.drawable.img008,
+				R.drawable.img009, R.drawable.img010, R.drawable.img011,
+				R.drawable.img012, };
+		
+		ImageAdapter adapter = new ImageAdapter(this, images);
+		adapter.createReflectedImages();// 创建倒影效果
+		GalleryFlow galleryFlow = (GalleryFlow) this
+				.findViewById(R.id.Gallery01);
+		galleryFlow.setFadingEdgeLength(0);
+		galleryFlow.setSpacing(-10); // 图片之间的间距
+		galleryFlow.setAdapter(adapter);
+
+		galleryFlow.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Toast.makeText(getApplicationContext(),
+						String.valueOf(position), Toast.LENGTH_SHORT).show();
+			}
+
+		});
+		galleryFlow.setSelection(4);
+	}
 }
