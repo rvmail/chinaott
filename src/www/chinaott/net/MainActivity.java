@@ -21,6 +21,7 @@ import www.chinaott.net.R;
 import www.chinaott.net.gallery.GalleryFlow;
 import www.chinaott.net.gallery.ImageAdapter;
 import www.chinaott.net.ui.AboutActivity;
+import www.chinaott.net.ui.DetailDramaActivity;
 import www.chinaott.net.ui.FeedbackActivity;
 import www.chinaott.net.ui.HelpActivity;
 import www.chinaott.net.ui.HistoryActivity;
@@ -142,8 +143,8 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 			break;
 		case R.id.yh_cz:
 			if (k != 4) {
-				hiddll(k);
-				showll(4);
+				hiddll1(k);
+				showll1(4);
 			}
 			k = 4;
 			break;
@@ -445,6 +446,7 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 					int position, long id) {
 				Toast.makeText(getApplicationContext(),
 						String.valueOf(position), Toast.LENGTH_SHORT).show();
+				startActivity(new Intent(MainActivity.this,DetailDramaActivity.class));
 			}
 
 		});

@@ -35,8 +35,24 @@
             android:label="@string/title_activity_feedback" >
         </activity>
         <activity
-            android:name="www.chinaott.net.ui.HelpActivity"
+            android:name=".ui.HelpActivity"
             android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name=".ui.DetailDramaActivity"
+            android:label="@string/title_activity_detail_drama" >
+        </activity>
+        <activity
+            android:name=".ui.BuyTicketActivity"
+            android:label="@string/title_activity_buy_ticket" >
+        </activity>
+        <activity
+            android:name=".ui.LterPayActivity"
+            android:label="@string/title_activity_lter_pay" >
+        </activity>
+        <activity
+            android:name="www.chinaott.net.ui.OpenVipActivity"
+            android:label="@string/title_activity_open_vip" >
         </activity>
     </application>
 
