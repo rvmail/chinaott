@@ -12,5 +12,6 @@
     <string name="title_activity_buy_ticket">BuyTicketActivity</string>
     <string name="title_activity_lter_pay">LterPayActivity</string>
     <string name="title_activity_open_vip">OpenVipActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
 
 </resources>
