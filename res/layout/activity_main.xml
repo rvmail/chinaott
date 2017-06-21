@@ -46,12 +46,39 @@
         android:layout_weight="8"
         android:visibility="visible" >
 
+         
          <www.chinaott.net.gallery.GalleryFlow
         android:id="@+id/Gallery01"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_world" />
+        android:text="@string/hello_world" 
+        />
+         
+        
     </LinearLayout>
+    
+      <LinearLayout
+        android:id="@+id/ll_sf_test"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:visibility="gone" >
+
+        <!-- 
+         <www.chinaott.net.gallery.GalleryFlow
+        android:id="@+id/Gallery01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_world" 
+        android:visibility="gone"/>
+          -->
+         <ListView
+        android:id="@+id/listViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </LinearLayout>
+    
 
     <LinearLayout
         android:id="@+id/ll_yh"

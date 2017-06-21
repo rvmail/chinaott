@@ -1,8 +1,17 @@
 package www.chinaott.net;
 
+import java.util.ArrayList;
+
+import com.google.gson.Gson;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,11 +24,16 @@ import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
+import tv.icntv.epgsdk.epgSDK;
 import www.chinaott.net.R;
+import www.chinaott.net.bean.LoginInfo;
 import www.chinaott.net.gallery.GalleryFlow;
 import www.chinaott.net.gallery.ImageAdapter;
+import www.chinaott.net.test.MovieLisBean;
+import www.chinaott.net.test.MovieListAdapterIm;
 import www.chinaott.net.ui.AboutActivity;
 import www.chinaott.net.ui.DetailDramaActivity;
 import www.chinaott.net.ui.FeedbackActivity;
@@ -30,17 +44,68 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 
 	private Button sj_btn,sf, yh, jc, yh_cz, yh_hy, yh_xx, yh_qb, yh_gd,gd_jl,gd_gy,gd_fk,gd_bz;
 	private TranslateAnimation mShowAction, mHiddenAction, mShowAction1, mHiddenAction1;
-	private LinearLayout llsf, llyh, lljc, ll_yh_cz, ll_yh_hy, ll_yh_xx, ll_yh_qb, ll_yh_gd;
+	private LinearLayout ll_sf_test,llsf, llyh, lljc, ll_yh_cz, ll_yh_hy, ll_yh_xx, ll_yh_qb, ll_yh_gd;
 	private int i = -1, k = -1;
+	
+	private ListView listView;
+	private LoginInfo loginInfo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		ImageLoaderConfiguration aDefault = ImageLoaderConfiguration.createDefault(this);
+		ImageLoader.getInstance().init(aDefault);
 		setContentView(R.layout.activity_main);
+		
+		Bundle extras = getIntent().getExtras();  
+		if (extras != null){  
+			loginInfo = (LoginInfo) extras.get("loginInfo_ser"); 
+		}
+		
+		llsf = (LinearLayout) findViewById(R.id.ll_sf);
+		ll_sf_test=(LinearLayout)findViewById(R.id.ll_sf_test);
+		listView = ((ListView) findViewById(R.id.listViewId));
+		llsf.setVisibility(View.GONE);
+		ll_sf_test.setVisibility(View.VISIBLE);
+		adapter = new MovieListAdapterIm(new ArrayList<MovieLisBean.ProgramSeriesBean>(), this);
+		listView.setAdapter(adapter);
+		
+		initEpg();
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+				// TODO Auto-generated method stub
+				
+				Thread thread = new Thread(new Runnable() {
+
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						StringBuffer sb = new StringBuffer();
+						int ret = epgSDK.getInstance().getMovieDetail(""+adapter.getItem(position).getId(), "", "217466", "", "", sb);
+						Message msg = Message.obtain();
+//						msg.what = GET_MOVIE_DETAIL;
+						msg.obj = sb;
+						Log.i("info", "--------getMovieDetail-" + sb);
+//						mHandler.sendMessage(msg);
+						Intent intent=new Intent(MainActivity.this,DetailDramaActivity.class);
+						intent.putExtra("data", sb.toString());
+						Bundle extras = new Bundle();  
+						extras.putSerializable("loginInfo_ser", loginInfo);  
+						  
+						intent.putExtras(extras); 
+						startActivity(intent);
+					}
+				});
+				thread.start();
+			}
+		});
+		
 		initView();
-		gallary();
+//		gallary();
 	}
 
 	
@@ -212,6 +277,10 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 				showll(3);
 			}
 			i = 3;
+			
+//			llsf.setVisibility(View.GONE);
+//			ll_sf_test.setVisibility(View.VISIBLE);
+//			showTestData();
 			break;
 			
 		case R.id.sj_btn:
@@ -452,4 +521,75 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 		});
 		galleryFlow.setSelection(4);
 	}
+	
+	
+	private void showTestData() {
+		// TODO Auto-generated method stub
+		adapter = new MovieListAdapterIm(new ArrayList<MovieLisBean.ProgramSeriesBean>(), this);
+		listView.setAdapter(adapter);
+		initEpg();
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+				// TODO Auto-generated method stub
+				
+				Thread thread = new Thread(new Runnable() {
+
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						StringBuffer sb = new StringBuffer();
+						int ret = epgSDK.getInstance().getMovieDetail(""+adapter.getItem(position).getId(), "", "217466", "", "", sb);
+						Message msg = Message.obtain();
+//						msg.what = GET_MOVIE_DETAIL;
+						msg.obj = sb;
+						Log.i("info", "--------getMovieDetail-" + sb);
+//						mHandler.sendMessage(msg);
+					}
+				});
+				thread.start();
+			}
+		});
+	}
+	
+	private MovieListAdapterIm adapter;
+	
+	
+	private void initEpg() {
+		// TODO Auto-generated method stub
+		String path = "";
+		String epgServer = "http://epg.is.ysten.com";
+		String searchServer = "http://search.is.ysten.com:8080/yst-search/";
+		String templateID = "1400004";
+		String STBext = "%7B%22abilities%22%3A%5B%22cp-TENCENT%22%5D%7D";
+		boolean ret = epgSDK.getInstance().sdkInit(path, epgServer, searchServer, templateID, STBext);
+
+		if (ret) {
+			Thread thread = new Thread(new Runnable() {
+
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					StringBuffer sb = new StringBuffer();
+					int ret = epgSDK.getInstance().getMovieList("217466", 1, 10, sb);
+					Gson gson = new Gson();
+					qsTextEntity = gson.fromJson(sb.toString(), MovieLisBean.class);
+					// adapter.addAll(qsTextEntity.getProgramSeries());
+					Log.i("info", "------getMovieList-" + sb.toString());
+					handler.sendEmptyMessage(1);
+				}
+			});
+			thread.start();
+		}
+
+	}
+
+	MovieLisBean qsTextEntity;
+
+	Handler handler = new Handler() {
+		public void handleMessage(Message msg) {
+			adapter.addAll(qsTextEntity.getProgramSeries());
+		};
+	};
 }
