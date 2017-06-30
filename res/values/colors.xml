@@ -33,5 +33,9 @@
     <color name="ov_line">#444444</color>
     <color name="ov_yellow">#FFB802</color>
     <color name="ov_not_selector">#282828</color>
+    <color name="line_color">#444444</color>
+    <color name="tab_blue">#11ADC1</color>
+    <color name="tab_red">#861C1C</color>
+    <color name="tab_yellow">#E7A806</color>
     
 </resources>

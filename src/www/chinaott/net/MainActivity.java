@@ -67,10 +67,10 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 		llsf = (LinearLayout) findViewById(R.id.ll_sf);
 		ll_sf_test=(LinearLayout)findViewById(R.id.ll_sf_test);
 		listView = ((ListView) findViewById(R.id.listViewId));
-		llsf.setVisibility(View.GONE);
-		ll_sf_test.setVisibility(View.VISIBLE);
-		adapter = new MovieListAdapterIm(new ArrayList<MovieLisBean.ProgramSeriesBean>(), this);
-		listView.setAdapter(adapter);
+//		llsf.setVisibility(View.GONE);
+//		ll_sf_test.setVisibility(View.VISIBLE);
+//		adapter = new MovieListAdapterIm(new ArrayList<MovieLisBean.ProgramSeriesBean>(), this);
+//		listView.setAdapter(adapter);
 		
 		initEpg();
 		listView.setOnItemClickListener(new OnItemClickListener() {
@@ -105,7 +105,7 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 		});
 		
 		initView();
-//		gallary();
+		gallary();
 	}
 
 	
@@ -582,14 +582,13 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 			});
 			thread.start();
 		}
-
 	}
 
 	MovieLisBean qsTextEntity;
 
 	Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
-			adapter.addAll(qsTextEntity.getProgramSeries());
+//			adapter.addAll(qsTextEntity.getProgramSeries());
 		};
 	};
 }

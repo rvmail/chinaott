@@ -2,41 +2,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/back_black"
+    android:orientation="vertical"
     tools:context="www.chinaott.net.MainActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
-        
-        <ImageView 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/setting_about_golive_logo"/>
 
-        <TextView 
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  "
-            android:layout_weight="1"/>
-        <Button
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="升级会员" 
-            android:id="@+id/sj_btn"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:background="@drawable/bg_alibuybutton"/>
+            android:src="@drawable/setting_about_golive_logo" />
 
         <TextView
-            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/deongaree"
-            android:text="账户：21921" />
+            android:layout_weight="1"
+            android:text="  " />
+
+        <Button
+            android:id="@+id/sj_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_alibuybutton"
+            android:gravity="center"
+            android:text="升级会员"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="账户：21921"
+            android:textColor="@color/deongaree" />
     </LinearLayout>
 
     <LinearLayout
@@ -46,39 +47,27 @@
         android:layout_weight="8"
         android:visibility="visible" >
 
-         
-         <www.chinaott.net.gallery.GalleryFlow
-        android:id="@+id/Gallery01"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_world" 
-        />
-         
-        
+        <www.chinaott.net.gallery.GalleryFlow
+            android:id="@+id/Gallery01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/hello_world" />
     </LinearLayout>
-    
-      <LinearLayout
+
+    <LinearLayout
         android:id="@+id/ll_sf_test"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
         android:visibility="gone" >
 
-        <!-- 
-         <www.chinaott.net.gallery.GalleryFlow
-        android:id="@+id/Gallery01"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_world" 
-        android:visibility="gone"/>
-          -->
-         <ListView
-        android:id="@+id/listViewId"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+   
+        <ListView
+            android:id="@+id/listViewId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
     </LinearLayout>
-    
 
     <LinearLayout
         android:id="@+id/ll_yh"
@@ -92,201 +81,268 @@
             android:id="@+id/ll_yh_tab"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" 
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="horizontal" >
 
             <Button
                 android:id="@+id/yh_cz"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/bg_bottomfouc"
-                android:textColor="@color/white"
-                android:text="充值" />
-            
-            <Button 
+                android:text="充值"
+                android:textColor="@color/white" />
+
+            <Button
                 android:id="@+id/yh_hy"
-                android:layout_weight="1"
-                android:layout_width="wrap_content" 
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/bg_bottomfouc"
-                android:textColor="@color/white"
-                android:text="全球播会员"/>
-            <Button 
+                android:text="全球播会员"
+                android:textColor="@color/white" />
+
+            <Button
                 android:id="@+id/yh_xx"
-                android:layout_weight="1"
-                android:layout_width="wrap_content" 
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/bg_bottomfouc"
-                android:textColor="@color/white"
-                android:text="我的信息"/>
-            <Button 
+                android:text="我的信息"
+                android:textColor="@color/white" />
+
+            <Button
                 android:id="@+id/yh_qb"
-                android:layout_weight="1"
-                android:layout_width="wrap_content" 
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/bg_bottomfouc"
-                android:textColor="@color/white"
-                android:text="我的钱包"/>
-            <Button 
+                android:text="我的钱包"
+                android:textColor="@color/white" />
+
+            <Button
                 android:id="@+id/yh_gd"
-                android:layout_weight="1"
-                android:layout_width="wrap_content" 
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/bg_bottomfouc"
-                android:textColor="@color/white"
-                android:text="更多"/>
+                android:text="更多"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_yh_cz"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4" 
-            android:visibility="visible">
-            <ImageView 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/b"/> 
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="4"
+            android:background="@color/ov_bg"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                 >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cz_tv_cz"
+                    android:text="充值" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cz_tv_zh"
+                    android:text="账户"
+                    android:layout_below="@id/cz_tv_cz"
+                    />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cz_tv_bz"
+                    android:text="币种"
+                    android:layout_below="@id/cz_tv_zh"/>
+                
+            </RelativeLayout>
+            
+            <TextView 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher" />
+            </LinearLayout>
         </LinearLayout>
-        
-         <LinearLayout
+
+        <LinearLayout
             android:id="@+id/ll_yh_hy"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4" 
-            android:visibility="gone"
-            android:orientation="vertical">
-            
-             <TextView 
-                 android:layout_weight="1"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:textColor="@color/white"
-                 android:gravity="center"
-                 android:text="成为全球播会员你将享有会员价观看影片和更多观景特权！"/>
-            <RelativeLayout 
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="4"
+            android:background="@color/ov_bg"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="成为全球播会员你将享有会员价观看影片和更多观景特权！"
+                android:textColor="@color/white" />
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="5">
-                
-                <Button 
+                android:layout_weight="5" >
+
+                <Button
                     android:id="@+id/hy_3y"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="899元"/>
-                <Button 
+                    android:text="899元"
+                    android:textColor="@color/white" />
+
+                <Button
                     android:id="@+id/hy_5y"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_toRightOf="@id/hy_3y"
-                    android:text="1199元"/>
-                <Button 
+                    android:text="1199元"
+                    android:textColor="@color/white" />
+
+                <Button
                     android:id="@+id/hy_1m"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_below="@id/hy_3y"
-                    android:text="30元"/>
-                <Button 
+                    android:text="30元"
+                    android:textColor="@color/white" />
+
+                <Button
                     android:id="@+id/hy_3m"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_below="@id/hy_3y"
                     android:layout_toRightOf="@id/hy_1m"
-                    android:text="88元"/>
-                <ImageView 
+                    android:text="88元"
+                    android:textColor="@color/white" />
+
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
-                    android:layout_toRightOf="@id/hy_5y"/>
+                    android:layout_toRightOf="@id/hy_5y"
+                    android:src="@drawable/ic_launcher" />
             </RelativeLayout>
-             
         </LinearLayout>
-        
-          <LinearLayout
+
+        <LinearLayout
             android:id="@+id/ll_yh_xx"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4" 
-            android:visibility="gone">
-            <ImageView 
+            android:layout_weight="4"
+            android:visibility="gone" >
+
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/d"/> 
+                android:src="@drawable/d" />
         </LinearLayout>
-        
-           <LinearLayout
+
+        <LinearLayout
             android:id="@+id/ll_yh_qb"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4" 
-            android:visibility="gone">
-            <ImageView 
+            android:layout_weight="4"
+            android:visibility="gone" >
+
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/e"/> 
+                android:src="@drawable/e" />
         </LinearLayout>
-        
-            <LinearLayout
+
+        <LinearLayout
             android:id="@+id/ll_yh_gd"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4" 
-            android:visibility="gone"
-            android:orientation="vertical">
-            
-                <LinearLayout 
-                    android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/gd_jl"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
-                     <Button 
-                         android:id="@+id/gd_jl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="观看记录"
-                        android:textColor="@color/white"
-                        android:background="@drawable/bg_bottomfouc"
-                        android:drawableTop="@drawable/ic_launcher"/>
-                    <Button 
-                        android:id="@+id/gd_gy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="关于"
-                        android:textColor="@color/white"
-                        android:background="@drawable/bg_bottomfouc"
-                        android:drawableTop="@drawable/ic_launcher"/>
-                </LinearLayout>
-                
-                 <LinearLayout 
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
-                    <Button 
-                        android:id="@+id/gd_fk"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="问题反馈"
-                        android:textColor="@color/white"
-                        android:background="@drawable/bg_bottomfouc"
-                        android:drawableTop="@drawable/ic_launcher"/>
-                    <Button 
-                        android:id="@+id/gd_bz"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="帮助"
-                        android:textColor="@color/white"
-                        android:background="@drawable/bg_bottomfouc"
-                        android:drawableTop="@drawable/ic_launcher"/>
-                </LinearLayout>
-                
+                    android:background="@drawable/bg_bottomfouc"
+                    android:drawableTop="@drawable/ic_launcher"
+                    android:text="观看记录"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/gd_gy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bottomfouc"
+                    android:drawableTop="@drawable/ic_launcher"
+                    android:text="关于"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/gd_fk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bottomfouc"
+                    android:drawableTop="@drawable/ic_launcher"
+                    android:text="问题反馈"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/gd_bz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bottomfouc"
+                    android:drawableTop="@drawable/ic_launcher"
+                    android:text="帮助"
+                    android:textColor="@color/white" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -316,30 +372,30 @@
             android:id="@+id/sf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="首发影院" 
             android:layout_marginRight="10dp"
-            android:textSize="20dp"
+            android:background="@drawable/bg_bottomfouc"
+            android:text="首发影院"
             android:textColor="@color/white"
-            android:background="@drawable/bg_bottomfouc"/>
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/yh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_bottomfouc"
+            android:text="用户中心"
             android:textColor="@color/white"
-            android:textSize="20dp"
-            android:text="用户中心" />
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/jc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_bottomfouc"
             android:layout_marginLeft="10dp"
-            android:textSize="20dp"
+            android:background="@drawable/bg_bottomfouc"
+            android:text="精彩片花"
             android:textColor="@color/white"
-            android:text="精彩片花" />
+            android:textSize="20dp" />
     </LinearLayout>
 
 </LinearLayout>
