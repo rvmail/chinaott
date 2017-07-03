@@ -61,7 +61,6 @@
         android:layout_weight="8"
         android:visibility="gone" >
 
-   
         <ListView
             android:id="@+id/listViewId"
             android:layout_width="match_parent"
@@ -146,49 +145,296 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                 >
+                android:layout_weight="2" >
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/cz_tv_cz"
-                    android:text="充值" />
-                
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="充值"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <TextView
                     android:id="@+id/cz_tv_zh"
-                    android:text="账户"
-                    android:layout_below="@id/cz_tv_cz"
-                    />
-                
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/cz_tv_cz"
+                    android:text="账户: "
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/cz_tv_zh_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cz_tv_cz"
+                    android:layout_toRightOf="@id/cz_tv_cz"
+                    android:text="21321540"
+                    android:textColor="@color/tab_blue"
+                    android:textSize="20dp" />
+
+                <TextView
                     android:id="@+id/cz_tv_bz"
-                    android:text="币种"
-                    android:layout_below="@id/cz_tv_zh"/>
-                
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cz_tv_zh"
+                    android:text="币种: "
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/cz_tv_bz_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cz_tv_zh"
+                    android:layout_toRightOf="@id/cz_tv_cz"
+                    android:text="RMB(人民币)"
+                    android:textColor="@color/tab_red"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/cz_tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cz_tv_bz"
+                    android:text="金额: "
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_first"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/cz_tv_bz"
+                    android:layout_toRightOf="@id/cz_tv_money"
+                    android:background="@drawable/bg_alibuybutton"
+                    android:focusable="true" >
+
+                    <ImageView
+                        android:id="@+id/first_iv_smallicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="￥200"
+                        android:textColor="@color/tab_yellow"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_second"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/cz_tv_bz"
+                    android:layout_toRightOf="@id/rl_first"
+                    android:background="@drawable/bg_alibuybutton"
+                    android:focusable="true" >
+
+                    <ImageView
+                        android:id="@+id/second_iv_smallicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="￥50"
+                        android:textColor="@color/tab_yellow"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_third"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/cz_tv_bz"
+                    android:layout_toRightOf="@id/rl_second"
+                    android:background="@drawable/bg_alibuybutton"
+                    android:focusable="true" >
+
+                    <ImageView
+                        android:id="@+id/third_iv_smallicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="￥20"
+                        android:textColor="@color/tab_yellow"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_fourth"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignLeft="@id/rl_first"
+                    android:layout_below="@id/rl_first"
+                    android:background="@drawable/bg_alibuybutton"
+                    android:focusable="true" >
+
+                    <ImageView
+                        android:id="@+id/fourth_iv_smallicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="￥10"
+                        android:textColor="@color/tab_yellow"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_fif"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignLeft="@id/rl_second"
+                    android:layout_below="@id/rl_first"
+                    android:background="@drawable/bg_alibuybutton"
+                    android:focusable="true" >
+
+                    <ImageView
+                        android:id="@+id/fif_iv_smallicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="￥5"
+                        android:textColor="@color/tab_yellow"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_six"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignLeft="@id/rl_third"
+                    android:layout_below="@id/rl_first"
+                    android:background="@drawable/bg_alibuybutton"
+                    android:focusable="true" >
+
+                    <ImageView
+                        android:id="@+id/six_iv_smallicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="￥1"
+                        android:textColor="@color/tab_yellow"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cz_tv_czk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_fourth"
+                    android:text="充值卡…"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/cz_bt_czk"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/rl_fourth"
+                    android:layout_toRightOf="@id/cz_tv_czk"
+                    android:background="@drawable/bg_alibuybutton"
+                    android:text="我有充值卡"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/cz_tv_ts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_fourth"
+                    android:layout_toRightOf="@id/cz_bt_czk"
+                    android:text="任何充值问题请致电："
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/cz_tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_fourth"
+                    android:layout_toRightOf="@id/cz_tv_ts"
+                    android:text="400187"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
             </RelativeLayout>
-            
-            <TextView 
+
+            <TextView
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="40dp"
                 android:layout_marginBottom="40dp"
-                android:background="@color/line_color"/>
+                android:layout_marginTop="40dp"
+                android:background="@color/line_color" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:orientation="vertical" >
 
                 <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/erweima" />
+
+                <TextView
+                    android:id="@+id/cz_tv_ts_r"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher" />
+                    android:layout_below="@id/cz_tv_cz"
+                    android:text="扫微信二维码支付￥20.00"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/cz_tv_qh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cz_tv_cz"
+                    android:text="切换支付宝"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/cz_tv_yj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cz_tv_cz"
+                    android:drawableLeft="@drawable/ic_launcher"
+                    android:text="一键支付"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
             </LinearLayout>
         </LinearLayout>
 
