@@ -14,5 +14,7 @@
     <string name="title_activity_open_vip">OpenVipActivity</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_player">PlayerActivity</string>
+    
+    <string name="bar_title">PlayerActivity</string>
 
 </resources>

@@ -25,6 +25,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import tv.icntv.epgsdk.epgSDK;
@@ -42,13 +43,16 @@ import www.chinaott.net.ui.HistoryActivity;
 
 public class MainActivity extends Activity implements OnClickListener,OnFocusChangeListener {
 
-	private Button sj_btn,sf, yh, jc, yh_cz, yh_hy, yh_xx, yh_qb, yh_gd,gd_jl,gd_gy,gd_fk,gd_bz;
+	private Button sj_btn,sf, yh, jc, yh_cz, yh_hy, yh_xx, yh_qb, yh_gd;
 	private TranslateAnimation mShowAction, mHiddenAction, mShowAction1, mHiddenAction1;
-	private LinearLayout ll_sf_test,llsf, llyh, lljc, ll_yh_cz, ll_yh_hy, ll_yh_xx, ll_yh_qb, ll_yh_gd;
+	private LinearLayout ll_sf_test,llsf, llyh, lljc, ll_yh_cz, ll_yh_qb, ll_yh_gd;
 	private int i = -1, k = -1;
 	
 	private ListView listView;
 	private LoginInfo loginInfo;
+	private RelativeLayout ll_yh_hy, ll_yh_xx;
+	
+	private RelativeLayout gd_rl_jl,gd_rl_gy,gd_rl_fk,gd_rl_bz;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -157,20 +161,20 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 		yh_gd.setOnClickListener(this);
 
 		ll_yh_cz = (LinearLayout) findViewById(R.id.ll_yh_cz);
-		ll_yh_hy = (LinearLayout) findViewById(R.id.ll_yh_hy);
-		ll_yh_xx = (LinearLayout) findViewById(R.id.ll_yh_xx);
+		ll_yh_hy = (RelativeLayout) findViewById(R.id.ll_yh_hy);
+		ll_yh_xx = (RelativeLayout) findViewById(R.id.ll_yh_xx);
 		ll_yh_qb = (LinearLayout) findViewById(R.id.ll_yh_qb);
 		ll_yh_gd = (LinearLayout) findViewById(R.id.ll_yh_gd);
 		
-		//gd_jl,gd_gy,gd_fk,gd_bz
-		gd_jl = (Button) findViewById(R.id.gd_jl);
-		gd_jl.setOnClickListener(this);
-		gd_gy = (Button) findViewById(R.id.gd_gy);
-		gd_gy.setOnClickListener(this);
-		gd_fk = (Button) findViewById(R.id.gd_fk);
-		gd_fk.setOnClickListener(this);
-		gd_bz = (Button) findViewById(R.id.gd_bz);
-		gd_bz.setOnClickListener(this);
+		//gd_rl_jl,gd_rl_gy,gd_rl_fk,gd_rl_bz
+		gd_rl_jl = (RelativeLayout) findViewById(R.id.gd_rl_jl);
+		gd_rl_jl.setOnClickListener(this);
+		gd_rl_gy = (RelativeLayout) findViewById(R.id.gd_rl_gy);
+		gd_rl_gy.setOnClickListener(this);
+		gd_rl_fk = (RelativeLayout) findViewById(R.id.gd_rl_fk);
+		gd_rl_fk.setOnClickListener(this);
+		gd_rl_bz = (RelativeLayout) findViewById(R.id.gd_rl_bz);
+		gd_rl_bz.setOnClickListener(this);
 	}
 
 	@Override
@@ -246,20 +250,20 @@ public class MainActivity extends Activity implements OnClickListener,OnFocusCha
 			}
 			k = 7;
 			break;
-			//gd_jl,gd_gy,gd_fk,gd_bz
-		case R.id.gd_jl:
+			//gd_rl_jl,gd_rl_gy,gd_rl_fk,gd_rl_bz
+		case R.id.gd_rl_jl:
 			startActivity(new Intent(MainActivity.this,HistoryActivity.class));
 			break;
 			
-		case R.id.gd_gy:
+		case R.id.gd_rl_gy:
 			startActivity(new Intent(MainActivity.this,AboutActivity.class));
 			break;
 			
-		case R.id.gd_fk:
+		case R.id.gd_rl_fk:
 			startActivity(new Intent(MainActivity.this,FeedbackActivity.class));
 			break;
 			
-		case R.id.gd_bz:
+		case R.id.gd_rl_bz:
 			startActivity(new Intent(MainActivity.this,HelpActivity.class));
 			break;
 			

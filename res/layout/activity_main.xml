@@ -438,7 +438,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/ll_yh_hy"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -448,147 +448,810 @@
             android:layout_marginTop="8dp"
             android:layout_weight="4"
             android:background="@color/ov_bg"
-            android:orientation="vertical"
             android:visibility="gone" >
 
             <TextView
+                android:id="@+id/hy_tv_ts_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="成为全球播会员你将享有会员价观看影片和更多观景特权！"
                 android:textColor="@color/white" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="5" >
+                android:layout_below="@id/hy_tv_ts_top"
+                android:orientation="horizontal" >
 
-                <Button
-                    android:id="@+id/hy_3y"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="899元"
-                    android:textColor="@color/white" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical" >
 
-                <Button
-                    android:id="@+id/hy_5y"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/hy_3y"
-                    android:text="1199元"
-                    android:textColor="@color/white" />
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp" >
 
-                <Button
-                    android:id="@+id/hy_1m"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/hy_3y"
-                    android:text="30元"
-                    android:textColor="@color/white" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
 
-                <Button
-                    android:id="@+id/hy_3m"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/hy_3y"
-                    android:layout_toRightOf="@id/hy_1m"
-                    android:text="88元"
-                    android:textColor="@color/white" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/hy_5y"
-                    android:src="@drawable/ic_launcher" />
-            </RelativeLayout>
-        </LinearLayout>
+                                <RelativeLayout
+                                    android:id="@+id/rl_onem"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_alignLeft="@id/rl_second"
+                                    android:layout_below="@id/rl_first"
+                                    android:background="@drawable/bg_alibuybutton"
+                                    android:focusable="true" >
 
-        <LinearLayout
+                                    <ImageView
+                                        android:id="@+id/onem_iv_smallicon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="￥5"
+                                        android:textColor="@color/tab_yellow"
+                                        android:textSize="20dp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_threem"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_alignLeft="@id/rl_second"
+                                    android:layout_below="@id/rl_first"
+                                    android:background="@drawable/bg_alibuybutton"
+                                    android:focusable="true" >
+
+                                    <ImageView
+                                        android:id="@+id/threem_iv_smallicon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="￥5"
+                                        android:textColor="@color/tab_yellow"
+                                        android:textSize="20dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_oney"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_alignLeft="@id/rl_second"
+                                    android:layout_below="@id/rl_first"
+                                    android:background="@drawable/bg_alibuybutton"
+                                    android:focusable="true" >
+
+                                    <ImageView
+                                        android:id="@+id/oney_iv_smallicon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="￥5"
+                                        android:textColor="@color/tab_yellow"
+                                        android:textSize="20dp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_threey"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_alignLeft="@id/rl_second"
+                                    android:layout_below="@id/rl_first"
+                                    android:background="@drawable/bg_alibuybutton"
+                                    android:focusable="true" >
+
+                                    <ImageView
+                                        android:id="@+id/threey_iv_smallicon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="￥5"
+                                        android:textColor="@color/tab_yellow"
+                                        android:textSize="20dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_sixm"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_alignLeft="@id/rl_second"
+                                    android:layout_below="@id/rl_first"
+                                    android:background="@drawable/bg_alibuybutton"
+                                    android:focusable="true" >
+
+                                    <ImageView
+                                        android:id="@+id/sixm_iv_smallicon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="￥5"
+                                        android:textColor="@color/tab_yellow"
+                                        android:textSize="20dp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_fivey"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_alignLeft="@id/rl_second"
+                                    android:layout_below="@id/rl_first"
+                                    android:background="@drawable/bg_alibuybutton"
+                                    android:focusable="true" >
+
+                                    <ImageView
+                                        android:id="@+id/fivey_iv_smallicon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/setting_lg_no_selected_icon" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="￥5"
+                                        android:textColor="@color/tab_yellow"
+                                        android:textSize="20dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我有兑换码:"
+                            android:textColor="@color/white" />
+
+                        <EditText
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/editt"
+                            android:inputType="number"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:layout_width="80dp"
+                            android:layout_height="33dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@drawable/bg_alibuybutton"
+                            android:gravity="center"
+                            android:text="兑换"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/erweima" />
+
+                    <TextView
+                        android:id="@+id/hy_tv_ts_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cz_tv_cz"
+                        android:text="差30.00元请扫微信二维码支付"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/hy_tv_qh"
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/cz_tv_cz"
+                        android:background="@drawable/bg_alibuybutton"
+                        android:text="切换支付宝"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/hy_tv_yj"
+                            android:layout_width="120dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/cz_tv_cz"
+                            android:background="@drawable/bg_alibuybutton"
+                            android:text="先看后付"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/cz_tv_cz"
+                            android:background="@drawable/bg_alibuybutton"
+                            android:drawableLeft="@drawable/alipay_icon"
+                            android:text="一键支付"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/ll_yh_xx"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="8dp"
             android:layout_weight="4"
+            android:background="@color/ov_bg"
+            android:padding="20dp"
             android:visibility="gone" >
 
-            <ImageView
+            <TextView
+                android:id="@+id/xx_tv_ts_top_l"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/d" />
-        </LinearLayout>
+                android:gravity="center_horizontal"
+                android:text="完善资料"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/xx_tv_ts_top_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/xx_tv_ts_top_l"
+                android:gravity="center_horizontal"
+                android:text="（首次完善个人资料会得到相应的现金奖励）"
+                android:textColor="@color/xx_grey"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/xx_tv_zero"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/xx_tv_ts_top_l"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/user_ico_coins_1"
+                android:text="￥0.00"
+                android:textColor="@color/xx_yellow" />
+
+            <TextView
+                android:id="@+id/xx_tv_half"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/xx_tv_ts_top_l"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/user_ico_coins_1"
+                android:text="￥0.50"
+                android:textColor="@color/xx_yellow" />
+
+            <TextView
+                android:id="@+id/xx_tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/xx_tv_ts_top_l"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/user_ico_coins_1"
+                android:text="￥1.00"
+                android:textColor="@color/xx_yellow" />
+
+            <ProgressBar
+                android:id="@+id/pbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/xx_tv_zero"
+                android:layout_marginTop="5dp"
+                android:max="300"
+                android:progress="100"
+                android:progressDrawable="@drawable/progressbar_drawable" />
+
+            <TextView
+                android:id="@+id/xx_tv_zh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pbar"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="账户："
+                android:textColor="@color/xx_grey"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/xx_tv_zh_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pbar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/xx_tv_zh"
+                android:gravity="center_horizontal"
+                android:text="21321540(账号和电脑绑定)"
+                android:textColor="@color/xx_grey"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/xx_tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="    性别："
+                android:textColor="@color/xx_grey"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:id="@+id/sex_group"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/pbar"
+                android:layout_below="@id/pbar"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/xx_tv_sex"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="女" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/xx_tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xx_tv_zh"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="电话："
+                android:textColor="@color/xx_grey"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/xx_edit_phone"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xx_tv_zh"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/xx_tv_phone"
+                android:background="@drawable/editt"
+                android:inputType="number"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/xx_grey" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/xx_tv_zh"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="35dp"
+                android:layout_toRightOf="@id/xx_edit_phone"
+                android:src="@drawable/fs_good" />
+
+            <TextView
+                android:id="@+id/xx_tv_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xx_tv_sex"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="    邮箱："
+                android:textColor="@color/xx_grey"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/xx_edit_mail"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xx_tv_zh"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/xx_tv_mail"
+                android:background="@drawable/editt"
+                android:inputType="number"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/xx_grey" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/xx_tv_zh"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="35dp"
+                android:layout_toRightOf="@id/xx_edit_mail"
+                android:src="@drawable/fs_good" />
+
+            <TextView
+                android:id="@+id/xx_tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xx_tv_phone"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="会员属性："
+                android:textColor="@color/xx_grey"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/xx_tv_type_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xx_tv_phone"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/xx_tv_type"
+                android:gravity="center_horizontal"
+                android:text="普通会员"
+                android:textColor="@color/xx_blue"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/xx_bt"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_alibuybutton"
+                android:gravity="center"
+                android:text="确  定"
+                android:textColor="@color/white" />
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/ll_yh_qb"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="8dp"
             android:layout_weight="4"
             android:visibility="gone" >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/e" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/ov_bg" >
+
+                <TextView
+                    android:id="@+id/cz_tv_c4z"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="我的余额"
+                    android:textColor="@color/white"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/qb_tv_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dp"
+                    android:gravity="center"
+                    android:text="-19.0"
+                    android:textColor="@color/white"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/more_payment_creditcard" />
+
+                <Button
+                    android:id="@+id/cz_bt_cwzk"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="200dp"
+                    android:background="@drawable/bg_alibuybutton"
+                    android:text="充值"
+                    android:textColor="@color/white"
+                    android:textSize="22dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="5"
+                android:background="@color/ov_bg"
+                android:orientation="vertical"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp" >
+
+                <TextView
+                    android:id="@+id/cz_tv_wts_r"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cz_tv_cz"
+                    android:text="账单记录"
+                    android:textColor="@color/white"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/cz_tv_ts_"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textColor="@color/line_color"
+                    android:textSize="22dp" />
+
+                <ListView
+                    android:id="@+id/qb_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/cz_tv_tsSS"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textColor="@color/line_color"
+                    android:textSize="22dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/cz_tv_ts_ree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cz_tv_cz"
+                        android:text="已用先看 后付金额："
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/cz_tv_ts_re1e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cz_tv_cz"
+                        android:text="-5:00元"
+                        android:textColor="@color/qb_red"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/cz_tv_yej"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/cz_tv_cz"
+                        android:background="@drawable/bg_alibuybutton"
+                        android:gravity="center"
+                        android:text="还款"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_yh_gd"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="8dp"
             android:layout_weight="4"
-            android:orientation="vertical"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:visibility="gone" >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal" >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
 
-                <Button
-                    android:id="@+id/gd_jl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_bottomfouc"
-                    android:drawableTop="@drawable/ic_launcher"
-                    android:text="观看记录"
-                    android:textColor="@color/white" />
+                <RelativeLayout
+                    android:id="@+id/gd_rl_jl"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/qd_jl"
+                    android:focusable="true"
+                    android:gravity="center" >
 
-                <Button
-                    android:id="@+id/gd_gy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_bottomfouc"
-                    android:drawableTop="@drawable/ic_launcher"
-                    android:text="关于"
-                    android:textColor="@color/white" />
-            </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/qd_jl_im" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:gravity="center_horizontal"
+                        android:text="观看记录"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+                </RelativeLayout>
 
-                <Button
-                    android:id="@+id/gd_fk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_bottomfouc"
-                    android:drawableTop="@drawable/ic_launcher"
-                    android:text="问题反馈"
-                    android:textColor="@color/white" />
+                <RelativeLayout
+                    android:id="@+id/gd_rl_gy"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/gd_rl_jl"
+                    android:background="@drawable/qd_gy"
+                    android:focusable="true"
+                    android:gravity="center" >
 
-                <Button
-                    android:id="@+id/gd_bz"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_bottomfouc"
-                    android:drawableTop="@drawable/ic_launcher"
-                    android:text="帮助"
-                    android:textColor="@color/white" />
-            </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/qd_gy_im" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:gravity="center_horizontal"
+                        android:text="关于"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gd_rl_fk"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:layout_below="@id/gd_rl_jl"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/qd_fk"
+                    android:focusable="true"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/qd_fk_im" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:gravity="center_horizontal"
+                        android:text="问题反馈"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gd_rl_bz"
+                    android:layout_width="160dp"
+                    android:layout_height="140dp"
+                    android:layout_below="@id/gd_rl_jl"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/gd_rl_fk"
+                    android:background="@drawable/qd_bz"
+                    android:focusable="true"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/qd_bz_im" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:gravity="center_horizontal"
+                        android:text="帮助"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+                </RelativeLayout>
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -610,7 +1273,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:gravity="center"
         android:orientation="horizontal" >
 
