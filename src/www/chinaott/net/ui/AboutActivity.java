@@ -25,7 +25,7 @@ public class AboutActivity extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_feedback);
+		setContentView(R.layout.activity_about);
 //		setContentView(R.layout.activity_about);
 //		first_iv_smallicon=(ImageView)findViewById(R.id.first_iv_smallicon);
 //		second_iv_smallicon=(ImageView)findViewById(R.id.second_iv_smallicon);

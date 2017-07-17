@@ -67,58 +67,79 @@
             android:layout_height="wrap_content"
             android:text="告诉我们您的体验问题,帮助我们为更多的用户提供更好的服务"
             android:textColor="@color/gy_text"
-            android:textSize="22dp" />
+            android:textSize="20dp" />
 
         <RadioGroup
             android:id="@+id/sex"
             android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
             android:layout_height="wrap_content" >
 
             <RadioButton
-                android:button="@null"  
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/feedradio"
+                android:button="@null"
                 android:drawableLeft="@drawable/radiobtn_icon_select"
                 android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:layout_margin="5dp"
                 android:text="看视屏很卡"
-                android:textColor="@color/gy_text"
-                android:background="@drawable/radio_focus"
-                android:textSize="22dp" />
+                android:textColor="@color/radiobutton"
+                android:textSize="20dp" />
 
             <RadioButton
-                android:button="@null"  
+                android:id="@+id/female"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/feedradio"
+                android:button="@null"
                 android:drawableLeft="@drawable/radiobtn_icon_select"
                 android:drawablePadding="10dp"
-                android:id="@+id/female"
                 android:text="影院内容不够丰富"
-                android:background="@drawable/radio_focus"
-                android:textColor="@color/gy_text"
-                android:textSize="22dp" />
+                android:textColor="@color/radiobutton"
+                android:textSize="20dp" />
 
             <RadioButton
-                android:button="@null"  
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/feedradio"
+                android:button="@null"
                 android:drawableLeft="@drawable/radiobtn_icon_select"
                 android:drawablePadding="10dp"
                 android:text="套餐更新太慢"
-                android:textColor="@color/gy_text"
-                android:background="@drawable/radio_focus"
-                android:textSize="22dp" />
+                android:layout_margin="5dp"
+                android:textColor="@color/radiobutton"
+                android:textSize="20dp" />
 
             <RadioButton
-                android:button="@null"  
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/feedradio"
+                android:button="@null"
                 android:drawableLeft="@drawable/radiobtn_icon_select"
                 android:drawablePadding="10dp"
                 android:text="套餐价格过高"
-                android:textColor="@color/gy_text"
-                android:background="@drawable/radio_focus"
-                android:textSize="22dp" />
+                android:layout_margin="5dp"
+                android:textColor="@color/radiobutton"
+                android:textSize="20dp" />
 
             <RadioButton
-                android:button="@null"  
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/feedradio"
+                android:layout_margin="5dp"
+                android:button="@null"
                 android:drawableLeft="@drawable/radiobtn_icon_select"
                 android:drawablePadding="10dp"
                 android:text="有其他体验问题"
-                android:background="@drawable/radio_focus"
-                android:textColor="@color/gy_text"
-                android:textSize="22dp" />
+                android:textColor="@color/radiobutton"
+                android:textSize="20dp" />
         </RadioGroup>
 
         <TextView
@@ -132,8 +153,8 @@
             android:background="@drawable/bg_alibuybutton"
             android:gravity="center"
             android:text="提交反馈"
-            android:textSize="22dp"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -141,18 +162,13 @@
             android:layout_weight="1" />
 
         <TextView
-            android:textSize="22dp"
+            android:id="@+id/feed_ts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="更多问题请到全球播官方网站倾诉：http://www.golive-tv.com 或致电："
-            android:textColor="@color/white" />
+            android:text="更多问题请到全球播官方网站倾诉：http://www.golive-tv.com 或致电：4001876867(9-21点)QQ：4066337"
+            android:textColor="@color/gy_text"
+            android:textSize="20dp" />
 
-        <TextView
-            android:textSize="22dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4001876867(9-21点)QQ：4066337"
-            android:textColor="@color/white" />
     </LinearLayout>
 
 </LinearLayout>

@@ -20,10 +20,8 @@
     <color name="text_search_no_data_hint">#e2e2e3</color>
     <color name="text_live_normal">#bec3c2</color>
     <color name="text_live_focus">#fdffff</color>
-    
     <color name="dopool_white">#ffffff</color>
     <color name="live_text_color">#becbcc</color>
-    
     <color name="sj_btn">#113DEE</color>
     <color name="white">#ffffff</color>
     <color name="grey">#EEEEEE</color>
@@ -35,7 +33,7 @@
     <color name="ov_not_selector">#282828</color>
     <color name="line_color">#444444</color>
     <color name="tab_blue">#11ADC1</color>
-    <color name="tab_red">#861C1C</color>
+    <color name="tab_red">#F32323</color>
     <color name="tab_yellow">#E7A806</color>
     <color name="editshape_focus">#0873EB</color>
     <color name="xx_yellow">#F4B901</color>
@@ -47,11 +45,19 @@
     <color name="gy_text">#6C6C6C</color>
     <color name="gy_blue">#00E1FF</color>
     <color name="yellow">#F4B901</color>
-    
-    <color name="transparent">#000000</color>  
-    <color name="color_bg_selected">#e0301e</color>  
-    <color name="color_bg_normal">#e7e7e8</color>  
-    <color name="color_text_selected">#ffffff</color>  
-    <color name="color_text_normal">#000000</color>  
-    
+    <color name="transparent">#000000</color>
+    <color name="color_bg_selected">#e0301e</color>
+    <color name="color_bg_normal">#e7e7e8</color>
+    <color name="color_text_selected">#ffffff</color>
+    <color name="color_text_normal">#000000</color>
+    <color name="tab_text">#626262</color>
+
+    <drawable name="dark_gray">#8F8F8F</drawable>
+    <drawable name="light_gray">#EEEEEE</drawable>
+    <drawable name="white">#FFFFFF</drawable>
+    <drawable name="black">#000000</drawable>
+    <drawable name="blue">#2A00FF</drawable>
+    <drawable name="green">#f0f0</drawable>
+    <drawable name="yellow">#FFFEA4</drawable>
+
 </resources>
