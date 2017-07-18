@@ -490,6 +490,7 @@ public class MainActivity extends Activity implements OnClickListener, OnFocusCh
 		gd_rl_bz = (RelativeLayout) findViewById(R.id.gd_rl_bz);
 		gd_rl_bz.setOnClickListener(this);
 		setTime();
+//		handler.postDelayed(runnable, 1000);
 	}
 
 	private void setTime() {
@@ -1439,8 +1440,8 @@ public class MainActivity extends Activity implements OnClickListener, OnFocusCh
 
 	Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
-			// adapter.addAll(qsTextEntity.getProgramSeries());
 			main_time.setText((String)msg.obj);
 		};
 	};
+
 }

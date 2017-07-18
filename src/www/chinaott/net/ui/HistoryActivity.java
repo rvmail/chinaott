@@ -1,16 +1,23 @@
 package www.chinaott.net.ui;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnKeyListener;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import www.chinaott.net.R;
 import www.chinaott.net.adapter.GalleryAdapter;
@@ -24,6 +31,7 @@ public class HistoryActivity extends Activity {
 	private MyRecyclerView mRecyclerView;
 	private GalleryAdapter mAdapter;
 	private List<Integer> mDatas;
+	private TextView history_time;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,21 +55,36 @@ public class HistoryActivity extends Activity {
 		mRecyclerView.setOnItemScrollChangeListener(new OnItemScrollChangeListener() {
 			@Override
 			public void onChange(View view, int position) {
-				// mImg.setImageResource(mDatas.get(position));
-//				 Toast.makeText(MainActivity.this, "--"+position, 1).show();
 			};
 		});
 
 		mAdapter.setOnItemClickLitener(new OnItemClickLitener() {
 			@Override
 			public void onItemClick(View view, int position) {
-				// Toast.makeText(getApplicationContext(), position + "",
-				// Toast.LENGTH_SHORT)
-				// .show();
 				Toast.makeText(HistoryActivity.this, "++" + position, 1).show();
 			}
 		});
-
+		
+		history_time=(TextView)findViewById(R.id.history_time);
+		new Thread() {
+			public void run() {
+				try {
+					while (true) {
+						SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+						String str = sdf.format(new Date());
+						handler.sendMessage(handler.obtainMessage(1000, str));
+						Thread.sleep(1000);
+					}
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			};
+		}.start();
 	}
-
+	
+	Handler handler = new Handler() {
+		public void handleMessage(Message msg) {
+			history_time.setText((String)msg.obj);
+		};
+	};
 }
